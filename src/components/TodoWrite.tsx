@@ -29,9 +29,20 @@ const TodoWrite = ({ todos, setTodos }: TodoWriteProps) => {
   };
   // tsx
   return (
-    <div>
-      <input type="text" value={title} onChange={e => handleChange(e)} onKeyDown={handleKeyDown} />
-      <button onClick={handleAdd}>등록</button>
+    <div className="flex items-center space-x-2 mb-6">
+      <input
+        type="text"
+        value={title}
+        onChange={e => handleChange(e)}
+        onKeyDown={handleKeyDown}
+        className="flex-1 p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-200"
+      />
+      <button
+        onClick={handleAdd}
+        className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+      >
+        등록
+      </button>
     </div>
   );
 };

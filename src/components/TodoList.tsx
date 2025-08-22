@@ -7,12 +7,19 @@ type TodoListProps = {
 };
 const TodoList = ({ todos, setTodos }: TodoListProps) => {
   return (
-    <div>
-      <h2>목록</h2>
+    <div className="mt-6">
+      <h2 className="text-xl font-semibold text-gray-700 mb-4">할일 목록</h2>
+
       {todos.length === 0 ? (
-        <p>등록된 할일이 없습니다.</p>
+        <p className="text-center text-gray-500 py-8">등록된 할일이 없습니다.</p>
       ) : (
-        todos.map(item => <TodoItem key={item.id} todo={item} todos={todos} setTodos={setTodos} />) // <div key={item.id}>{item.title}</div>
+        <ul className="space-y-3">
+          {
+            todos.map(item => (
+              <TodoItem key={item.id} todo={item} todos={todos} setTodos={setTodos} />
+            )) // <div key={item.id}>{item.title}</div>
+          }
+        </ul>
       )}
     </div>
   );

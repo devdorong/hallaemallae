@@ -52,27 +52,61 @@ const TodoItem = ({ todos, todo, setTodos }: TodoItemProps) => {
   };
   // tsx
   return (
-    <div>
+    <li className="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-sm">
       {isEdit ? (
-        <>
+        <div className="flex flex-1 items-center space-x-2">
           <input
             type="text"
             value={editTitle}
             onChange={e => setEditTitle(e.target.value)}
             onKeyDown={handleKeyDown}
+            className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
           />
-          <button onClick={handleEditSave}>저장</button>
-          <button onClick={handleEditCancel}>취소</button>
-        </>
+          <button
+            onClick={handleEditSave}
+            className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition-colors"
+          >
+            저장
+          </button>
+          <button
+            onClick={handleEditCancel}
+            className="bg-gray-400 text-white p-2 rounded-lg hover:bg-gray-500 transition-colors"
+          >
+            취소
+          </button>
+        </div>
       ) : (
-        <>
-          <input type="checkbox" onChange={() => handleToggle(todo.id)} checked={todo.completed} />
-          <span>{todo.title}</span>
-          <button onClick={handleEdit}>수정</button>
-          <button onClick={() => handleDelete(todo.id)}>삭제</button>
-        </>
+        <div className="flex flex-1 items-center justify-between">
+          <div className="flex items-center">
+            <input
+              type="checkbox"
+              onChange={() => handleToggle(todo.id)}
+              checked={todo.completed}
+              className="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+            />
+            <span
+              className={`flex items-center ml-4 text-lg text-gray-800 break-all ${todo.completed ? 'line-through text-gray-400' : ''}`}
+            >
+              {todo.title}
+            </span>
+          </div>
+          <div className="flex space-x-2">
+            <button
+              onClick={handleEdit}
+              className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition-colors"
+            >
+              수정
+            </button>
+            <button
+              onClick={() => handleDelete(todo.id)}
+              className="bg-red-500 text-white p-2 rounded-lg hover:bg-red-600 transition-colors"
+            >
+              삭제
+            </button>
+          </div>
+        </div>
       )}
-    </div>
+    </li>
   );
 };
 

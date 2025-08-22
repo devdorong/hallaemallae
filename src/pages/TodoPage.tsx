@@ -16,9 +16,9 @@ function TodoPage() {
 
   // tsx
   return (
-    <div>
-      <h1>HalleMalle</h1>
-      <div>
+    <div className="flex flex-col items-center">
+      <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-lg mx-auto">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">오늘의 할 일</h2>
         <TodoWrite todos={todos} setTodos={setTodos} />
         <TodoList todos={todos} setTodos={setTodos} />
       </div>
