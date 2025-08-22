@@ -43,7 +43,6 @@ const TodoItem = ({ todos, todo, setTodos }: TodoItemProps) => {
     setTodos(arr);
   };
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    // console.log(e.key) : 입력중인 키 알아내기
     if (e.key === 'Enter') {
       handleEditSave();
     }

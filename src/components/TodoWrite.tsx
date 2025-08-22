@@ -23,7 +23,6 @@ const TodoWrite = ({ todos, setTodos }: TodoWriteProps) => {
     setTitle(e.target.value);
   };
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    // enter 키를 입력시 처리
     if (e.key === 'Enter') {
       handleAdd();
     }
