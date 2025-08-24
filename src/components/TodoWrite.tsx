@@ -29,7 +29,7 @@ const TodoWrite = ({ todos, setTodos }: TodoWriteProps) => {
   };
   // tsx
   return (
-    <div className="flex items-center space-x-2 mb-6">
+    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 mb-6">
       <input
         type="text"
         value={title}
@@ -39,7 +39,7 @@ const TodoWrite = ({ todos, setTodos }: TodoWriteProps) => {
       />
       <button
         onClick={handleAdd}
-        className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+        className="shrink-0 bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
       >
         등록
       </button>
