@@ -85,7 +85,7 @@ const TodoItem = ({ todos, todo, setTodos }: TodoItemProps) => {
               className="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
             <span
-              className={`flex-1 text-gray-800 text-base break-words ${
+              className={`flex-1 text-gray-800 text-base break-all ${
                 todo.completed ? 'line-through text-gray-400' : ''
               }`}
             >
