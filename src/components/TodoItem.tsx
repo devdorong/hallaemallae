@@ -12,6 +12,7 @@ const TodoItem = ({ todos, todo, setTodos }: TodoItemProps) => {
   const [editTitle, setEditTitle] = useState(todo.title);
 
   const handleEdit = () => {
+    setEditTitle(todo.title);
     setIsEdit(true);
   };
   const handleEditSave = () => {
