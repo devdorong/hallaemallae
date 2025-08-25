@@ -64,13 +64,13 @@ const TodoItem = ({ todos, todo, setTodos }: TodoItemProps) => {
           />
           <button
             onClick={handleEditSave}
-            className="shrink-0 bg-blue-500 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-600 transition"
+            className="shrink-0 bg-blue-500 text-white px-3 py-2 rounded-md text-sm hover:bg-blue-600 transition"
           >
             저장
           </button>
           <button
             onClick={handleEditCancel}
-            className="shrink-0 bg-gray-400 text-white px-3 py-1 rounded-md text-sm hover:bg-gray-500 transition"
+            className="shrink-0 bg-gray-400 text-white px-3 py-2 rounded-md text-sm hover:bg-gray-500 transition"
           >
             취소
           </button>
@@ -85,7 +85,7 @@ const TodoItem = ({ todos, todo, setTodos }: TodoItemProps) => {
               className="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
             <span
-              className={`flex-1 text-gray-800 text-base whitespace-pre-wrap break-words ${
+              className={`flex-1 text-gray-800 text-base break-words ${
                 todo.completed ? 'line-through text-gray-400' : ''
               }`}
             >
@@ -95,7 +95,7 @@ const TodoItem = ({ todos, todo, setTodos }: TodoItemProps) => {
           <div className="flex space-x-2 shrink-0">
             <button
               onClick={handleEdit}
-              className="bg-blue-500 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-600 transition"
+              className="bg-blue-500 text-white px-3 py-2 rounded-md text-sm hover:bg-blue-600 transition"
             >
               수정
             </button>

@@ -35,11 +35,11 @@ const TodoWrite = ({ todos, setTodos }: TodoWriteProps) => {
         value={title}
         onChange={e => handleChange(e)}
         onKeyDown={handleKeyDown}
-        className="flex-1 p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-200"
+        className="flex-1 px-3 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-200"
       />
       <button
         onClick={handleAdd}
-        className="shrink-0 bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+        className="shrink-0 bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
       >
         등록
       </button>
